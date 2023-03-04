@@ -1,53 +1,37 @@
+let counterElement = document.getElementById("counterValue");
 
-let counterElement = document.getElementById("conterValue");
-function onIncrement(){
-    let previoursCounterValue = counterElement.textContent;
-    let updateCountervalue = parseInt(previoursCounterValue) + 1;
-    counterElement.textContent = updateCountervalue;
-
-    if (updateCountervalue > 0 ) {
-        counterElement.style.color = "green";
-    }
-
-    else if (updateCountervalue < 0){
-
-        counterElement.style.color = "red";
-    }
-    else {
-        counterElement.style.color = "black";
-    }
-
-
-
-
-
-}
-
-function onReset(){
-    updateCountervalue = 0;
-    counterElement.textContent = updateCountervalue;
+function onIncrement() {
+  let previousCounterValue = counterElement.textContent;
+  let updatedCounterValue = parseInt(previousCounterValue) + 1;
+  if (updatedCounterValue > 0) {
+    counterElement.style.color = "green";
+  }
+  else if (updatedCounterValue < 0) {
+    counterElement.style.color = "red";
+  }
+  else {
     counterElement.style.color = "black";
-
+  }
+  counterElement.textContent = updatedCounterValue;
 }
 
-function onDecrement(){
-    let previoursCounterValue = counterElement.textContent;
-    let updateCountervalue = parseInt(previoursCounterValue) - 1;
-    counterElement.textContent = updateCountervalue;
-     if (updateCountervalue > 0 ) {
-        counterElement.style.color = "green";
-    }
+function onDecrement() {
+  let previousCounterValue = counterElement.textContent;
+  let updatedCounterValue = parseInt(previousCounterValue) - 1;
+  if (updatedCounterValue > 0) {
+    counterElement.style.color = "green";
+  }
+  else if (updatedCounterValue < 0) {
+    counterElement.style.color = "red";
+  }
+  else {
+    counterElement.style.color = "black";
+  }
+  counterElement.textContent = updatedCounterValue;
+}
 
-    else if (updateCountervalue < 0){
-
-        counterElement.style.color = "red";
-    }
-    else {
-        counterElement.style.color = "black";
-    }
-
-
-
-
-
+function onReset() {
+  let counterValue = 0;
+  counterElement.textContent = counterValue;
+  counterElement.style.color = "black";
 }
